@@ -1,188 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlacasSteel - Placas Metálicas Personalizadas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlacasSteel</title>
+  <style>
+    :root{
+      --black:#0b0b0b;
+      --white:#ffffff;
+      --muted:rgba(255,255,255,.78);
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #000;
-}
-
-/* MENU SUPERIOR */
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
-
-.logo {
-    height: 50px;
-}
-
-.nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-.nav a:hover {
-    color: #25D366;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 120px 20px 60px;
-}
-
-.hero img {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #555;
-    max-width: 600px;
-    margin: auto;
-}
-
-.box {
-    background: #f5f5f5;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 40px auto;
-    max-width: 600px;
-    text-align: left;
-    font-size: 18px;
-}
-
-/* BOTONES */
-.buttons {
-    margin-top: 30px;
-}
-
-.btn-whatsapp {
-    display: block;
-    background: #25D366;
-    color: white;
-    padding: 18px;
-    margin: 10px auto;
-    border-radius: 12px;
-    font-size: 20px;
-    text-decoration: none;
-    max-width: 350px;
-    font-weight: bold;
-}
-
-.btn-email {
-    display: block;
-    background: black;
-    color: white;
-    padding: 18px;
-    margin: 10px auto;
-    border-radius: 12px;
-    font-size: 20px;
-    text-decoration: none;
-    max-width: 350px;
-    font-weight: bold;
-}
-
-/* SECCIONES */
-.section {
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.footer {
-    text-align: center;
-    padding: 30px;
-    color: #666;
-    font-size: 14px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- MENU SUPERIOR -->
-<header class="header">
-    <img src="LOGO PLACASSTEEL.PNG" class="logo">
-    <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#galeria">Galería</a>
-        <a href="#quienes">Quiénes somos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<!-- INICIO -->
-<section id="inicio" class="hero">
-    <img src="LOGO PLACASSTEEL.PNG" alt="PlacasSteel Logo">
-
-    <h1>Placas Metálicas Personalizadas</h1>
-
-    <p class="subtitle">
-        Fabricación, grabado y marcado profesional en acero inoxidable,
-        aluminio y otros metales. Envíos a toda España.
-    </p>
-
-    <div class="box">
-        ✔ Placas metálicas personalizadas<br>
-        ✔ Grabado y marcado profesional<br>
-        ✔ Diseños a medida (sin precios fijos)<br>
-        ✔ Varios metales disponibles<br>
-        🚚 Envíos a toda España<br>
-        ✉ Presupuesto sin compromiso
-    </div>
-
-    <div class="buttons">
-        <a class="btn-whatsapp" href="https://wa.me/34641455092" target="_blank">
-            Pedir presupuesto por WhatsApp
-        </a>
-
-        <a class="btn-email" href="mailto:ventas@placassteel.com">
-            Pedir presupuesto por correo (envía tu diseño o foto)
-        </a>
-    </div>
-</section>
-
-<!-- GALERIA -->
-<section id="galeria" class="section">
-    <h2>Galería</h2>
-    <p>Aquí podrás ver imágenes y vídeos de trabajos personalizados (en proceso).</p>
-</section>
-
-<!-- QUIENES SOMOS -->
-<section id="quienes" class="section">
-    <h2>Quiénes somos</h2>
-    <p>
-        PlacasSteel es una marca especializada en placas metálicas personalizadas,
-        grabado y marcado profesional en diferentes metales, con envíos a toda España.
-    </p>
-</section>
+    /* TOP BAR */
+    .topbar{
+      position:fixed;
+      top:0; left:0; right:0;
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 18px;
+      background: rgba(0,0,0,.78);
+      backdrop-filter: blur(6px);
+      z-index:50;
